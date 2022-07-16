@@ -1,3 +1,7 @@
+p{
+  color:'red';
+  text-align:'left';
+}
 .App {
   text-align: center;
 }
@@ -22,6 +26,15 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.Frontimage{
+  width:580px;
+  height: 470px;
+
+}
+.image{
+  width:130px;
+  height: 110px;
 }
 
 .App-link {

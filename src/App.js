@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+// import LandingPage from './Components/Pages/LandingPage';
+import IndexRoute from './Components/Pages/IndexRoute';
+import { ThemeProvider, Container } from '@mui/material'
+import {theme} from './Components/Style/Styletheme'
+import Navbar from './Components/PagesComponent/Navbar';
+import Footer from './Components/PagesComponent/Footer';
+// import Example from './Example.js'
+import CarouselState from './Components/Context/CarouselState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Container maxWidth='lg'>
+      <ThemeProvider theme={theme}>
+        <CarouselState>
+        <Navbar/>
+        <IndexRoute />
+        </CarouselState>
+      </ThemeProvider>
+    </Container>
+        <Footer/>
+        {/* <Example/> */}
+    </>
+        
   );
 }
 
